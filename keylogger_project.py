@@ -15,8 +15,8 @@ def computerInfos(): #Function to get computer information
         mach['O.S. Architecture']=platform.machine()
         mach['O.S. Kernel']=platform.release()
         mach['Distro']=platform.version()
-        mach['Processador']=platform.processor()
-        mach['Memoria RAM']=str(round(psutil.virtual_memory().total / (1024.0 **3)))+"GB"
+        mach['Processor']=platform.processor()
+        mach['RAM Memory']=str(round(psutil.virtual_memory().total / (1024.0 **3)))+"GB"
         return json.dumps(mach)
     except Exception as e:
         logging.exception(e)
